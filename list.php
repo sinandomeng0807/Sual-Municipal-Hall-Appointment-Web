@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['employee_id'])) {
+    header("Location: index.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +23,7 @@
         <button onclick="window.location.href='status.html'"><i class="fa-solid fa-gauge"></i> Appointment Status</button>
         <button onclick="window.location.href='manage.html'"><i class="fa-solid fa-pen-to-square"></i> Manage Appointment</button>
         <button onclick="window.location.href='details.html'"><i class="fa-solid fa-cloud"></i> Appointment Details</button>
-        <button id="first" onclick="window.location.href='login.html'">Sign Out</button>
+        <button id="first" onclick="window.location.href='database-connection/logout.php'">Sign Out</button>
     </div>
     <div class="main-content">
         <div class="header">
@@ -36,9 +44,6 @@
                     <th>Occupant</th>
                     <th>Actions</th>
                 </tr>
-                <?php
-                    require("database-connection/appoinment-list.php");
-                ?>
                 <tr>
                     <td>James</td>
                     <td>22 Purok 3</td>

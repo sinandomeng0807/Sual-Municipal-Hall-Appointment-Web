@@ -10,11 +10,13 @@
 <body>
     <div class="container">
         <div class="logo"></div>
-        <label id="first" for="useradminid">User Admin</label>
-        <input type="text" id="userid" placeholder="Enter Admin ID">
-        <label id="second" for="password">User Password</label>
-        <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="window.location.href='list.html'">LOGIN</button>
+        <form action="database-connection/login.php" method="POST">
+            <label id="first" for="useradminid">User Admin</label>
+            <input type="text" id="employee_id" name="employee_id" placeholder="Enter Admin ID" required>
+            <label id="second" for="password">User Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <input type="submit">
+        </form>
     </div>
 </body>
 </html>
