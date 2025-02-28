@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="request.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <button onclick="window.location.href='list.html'"><i class="fa-solid fa-clipboard-list"></i> Appointment List</button>
+        <button onclick="window.location.href='status.html'"><i class="fa-solid fa-gauge"></i> Appointment Status</button>
+        <button onclick="window.location.href='manage.html'"><i class="fa-solid fa-pen-to-square"></i> Manage Appointment</button>
+        <button id="signOutTrigger">Sign Out</button>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>APPOINTMENT REQUEST</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        
+            <div class="appointment-box">
+                <button class="navigation-button left-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="navigation-button right-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                <h3 style="background: white; color: black; display: inline-block; padding: 5px 10px; border-radius: 5px;">Visitor</h3>
+                <div class="input-group">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Address">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Barangay">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Contact No">
+                    <input type="text" placeholder="Office">
+                </div>
+                <div class="input-group">
+                    <input type="date">
+                    <input type="text" placeholder="Purpose Of Visit">
+                </div>
+                <input type="time" style="width: 98.6%; padding: 5px;">
+                <div class="image-upload">
+                    <h3>Front ID</h3>
+                    <div>Front ID</div>
+                    <h3>Back ID</h3>
+                    <div>Back ID</div>
+                    <h3>Selfie</h3>
+                    <div>Selfie</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalOverlay" class="modal-overlay"></div>
+    <div id="signOutModal" class="modal">
+        <h2>SIGN OUT!</h2>
+        <div class="btn-container">
+            <button class="btn cancel-btn" onclick="closeModal()">CANCEL</button>
+            <button class="btn signout-btn" onclick="signOut()">SIGN OUT</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("signOutModal");
+        const overlay = document.getElementById("modalOverlay");
+        const signOutButton = document.getElementById("signOutTrigger");
+
+        function openModal() {
+            modal.style.display = "block";
+            overlay.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            overlay.style.display = "none";
+        }
+
+        function signOut() {
+            window.location.href = 'login.html';
+        }
+
+        signOutButton.addEventListener("click", openModal);
+    </script>
+
+</body>
+</html>
