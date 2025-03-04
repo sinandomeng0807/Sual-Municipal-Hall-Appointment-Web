@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment List</title>
+    <link rel="stylesheet" href="add-appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Photos/logo.png" alt="Logo">
+        </div>
+            <ul class="menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-gauge mr-3"></i> Dashboard</a></li>
+                <li><a href="appointment-list.html"><i class="fa-solid fa-list mr-3"></i> Appointment List</a></li>
+                <li><a href="manage-appointment.html"><i class="fa-solid fa-list-check"></i> Manage Appointment</a></li>
+                <li><a href="add-appointment.html"><i class="fa-solid fa-plus mr-3"></i> Add Appointment</a></li>
+            </ul>
+        <div class="sign-out"onclick="window.location.href='HFID.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</div>
+
+    </div>
+    <div class="main-container">
+        <div class="header">
+            <h1>Sual Municipal Hall Admin Panel</h1>
+            <div class="user">
+                <span>James Santos</span>
+                <div class="user-icon"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="display">
+                <h1>ADD APPOINTMENT</h1>
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <div class="content-form">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label>Appointment Type</label>
+                        <select>
+                            <option value="Visitor">Visitor</option>
+                            <option value="Resident">Resident</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time">
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Office</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Barangay</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Zip Code</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Province</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Purpose</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Front ID</label>
+                        <div class="image-upload">Upload Front ID</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Back ID</label>
+                        <div class="image-upload">Upload Back ID</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Selfie</label>
+                        <div class="image-upload">Upload Selfie</div>
+                    </div>
+                    </div>
+                    <button class="submit-btn">Submit Appointment</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
