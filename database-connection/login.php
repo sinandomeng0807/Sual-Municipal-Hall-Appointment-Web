@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($password == $admin_password) {
             $_SESSION['employee_id'] = $employee_id;
-            header("Location: ./../list.php");
+            header("Location: ./../dashboard.php");
             exit();
         } else {
             echo "Invalid Password or Username UwU";

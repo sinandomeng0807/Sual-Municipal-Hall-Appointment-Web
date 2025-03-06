@@ -24,7 +24,12 @@ while ($row = mysqli_fetch_assoc($get_appointment_data)){
         "<td>",
             $row["r_email"],
         "</td>",
-        "<td><button class='view-btn'>View Appointment Request</button></td>",
+        "<td class='action-status'>",
+        "<button class='view-btn' onclick=''> View Details</button>",
+        "</td>",
+        "<td class='action-status'>",
+        "<button class='approve-btn'>Approve</button>",
+        "</td>",
     "</tr>";
 }
 mysqli_close($conn);

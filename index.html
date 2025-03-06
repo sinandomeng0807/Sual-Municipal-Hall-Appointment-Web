@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/HFID.css">
 
 </head>
 <body>
     <div class="container">
         <div class="logo"></div>
         <form action="database-connection/login.php" method="POST">
-            <label id="first" for="useradminid">User Admin</label>
+            <label id="first" for="useradminid">Enter User Admin ID</label>
             <input type="text" id="employee_id" name="employee_id" placeholder="Enter Admin ID" required>
             <label id="second" for="password">User Password</label>
             <input type="password" id="password" name="password" placeholder="Enter Password" required>
-            <input type="submit">
+            <a href="forgot-password.html" style="display: block; text-align: center; color: blue; margin-top: 10px;">Forgot Password?</a>
+            <input type="submit" value="Log In">
         </form>
     </div>
 </body>
