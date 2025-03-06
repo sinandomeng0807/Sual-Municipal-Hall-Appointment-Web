@@ -4,6 +4,7 @@ if (!isset($_SESSION['employee_id'])) {
     header("Location: index.html");
     exit();
 }
+require("database-connection/appointment-status.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,19 +63,19 @@ if (!isset($_SESSION['employee_id'])) {
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold">NUMBER OF APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">449</p>
+                        <p class="text-2xl font-bold"><?php echo $num_appointment->num_rows; ?></p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold text-green-600">NUMBER OF APPROVED APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">100</p>
+                        <p class="text-2xl font-bold"><?php echo $num_approved->num_rows; ?></p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold text-orange-600">NUMBER OF PENDING APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">125</p>
+                        <p class="text-2xl font-bold"><?php echo $num_pending->num_rows; ?></p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center border-2 border-500">
                         <p class="text-sm font-bold text-red-600">NUMBER OF REJECTED APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">15</p>
+                        <p class="text-2xl font-bold"><?php echo $num_rejected->num_rows; ?></p>
                     </div>
                 </div>
             </div>
