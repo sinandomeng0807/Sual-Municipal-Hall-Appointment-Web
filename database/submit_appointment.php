@@ -52,7 +52,6 @@ $stmt->bind_param(
     $data['rEmailTextView'],
     $data['vZipTextView'],
     $data['vProvinceTextView']
-    
 );
 
 // Execute the query
