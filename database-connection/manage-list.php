@@ -1,6 +1,6 @@
 <?php
 require_once("connection.php");
-$query = "SELECT * FROM $table";
+$query = "SELECT * FROM $table ORDER BY created_at DESC";
 $get_appointment_data = $conn->query($query);
 while ($row = mysqli_fetch_assoc($get_appointment_data)){
     if ($row["occupant"] == 'Resident') {

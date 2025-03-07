@@ -1,7 +1,7 @@
 <?php
 require_once("connection.php");
 $currentdate = date("y-m-d");
-$query = "SELECT * FROM $table WHERE date = '$currentdate'";
+$query = "SELECT * FROM $table WHERE date = '$currentdate' ORDER BY created_at DESC";
 $get_appointment_data = $conn->query($query);
 while ($row = mysqli_fetch_assoc($get_appointment_data)){
     echo "<tr class='border-b'>",

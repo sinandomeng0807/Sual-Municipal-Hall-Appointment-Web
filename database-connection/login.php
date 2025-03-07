@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $employee_id = $_POST["employee_id"];
     $password = $_POST["password"];
 
-    $conn = new mysqli("localhost", "root", "", "employee");
+    $conn = new mysqli("localhost", "root", "", "sual_municipal_hall");
     
     if ($conn->connect_error) {
         die("Connection Failed due to ". $conn->connect_error);
