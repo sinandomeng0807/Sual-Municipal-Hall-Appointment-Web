@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Photos/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    text-align: center;
+}
+.container {
+    text-align: center;
+    background: white;
+    padding: 80px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    width: 100%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('Photos/logo.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 60px;
+    font-size: 36px;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 5px 0;
+    border: 2px solid #999;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    align-items: center;
+}
+button {
+    padding: 5px 10px;
+    border: 2px solid rgb(147, 147, 147);
+    background-color: transparent;
+    color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 540;
+    width: 40%;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+button:hover {
+    background-color: #ccc;
+}
+.forgot-password {
+    width: 45%;
+    text-align: right;
+    color: blue;
+    text-decoration: none;
+}
