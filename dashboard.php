@@ -24,10 +24,10 @@
                         <i class="fa-solid fa-list mr-3"></i> <a href="appointment-list.php">Appointment List</a>
                     </li>
                     <li class="flex items-center p-3 hover:bg-red-700 rounded-2xl my-2 border-2 border-white">
-                        <i class="fa-solid fa-chart-simple mr-3"></i> <a href="manage-appointment.html">Manage Appointment</a>
+                        <i class="fa-solid fa-chart-simple mr-3"></i> <a href="manage-appointment.php">Manage Appointment</a>
                     </li>
                     <li class="flex items-center p-3 hover:bg-red-700 rounded-2xl my-2 border-2 border-white">
-                        <i class="fa-solid fa-plus mr-3"></i> <a href="add-appointment.html">Add Appointment</a>
+                        <i class="fa-solid fa-plus mr-3"></i> <a href="add-appointment.php">Add Appointment</a>
                     </li>
                 </ul>
             </nav>
