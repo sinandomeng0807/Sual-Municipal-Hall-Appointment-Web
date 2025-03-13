@@ -1,22 +1,24 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "sual_municipal_hall");
-if ($conn->connect_error) {
-    die("Connection Failed due to ". $conn->connect_error);
-}
-
-$query = "SELECT * FROM appointments";
+$table = "appointments";
+$query = "SELECT * FROM $table ORDER BY created_at DESC";
 $get_appointment_data = $conn->query($query);
-foreach ($get_appointment_data as $row){
+while ($row = mysqli_fetch_assoc($get_appointment_data)){
     $btn_func = $row['id'];
     $detail_btn = '<button class="view-btn" onclick="ViewDetails('."'$btn_func'".')">View Details</button>';
     if ($row["occupant"] == 'Resident') {
         $location = $row["r_barangay"];
-        $row_class = "resident";
     } else {
         $location = $row["v_province"];
-        $row_class = "visitor";
     }
-    echo "<tr class='$row_class'>",
+    if ($row["status"] == "pending") {
+        $status = "pending";
+    } elseif ($row["status"] == "approve"){
+        $status = "approve";
+    } elseif ($row["status"] == "decline"){
+        $status = "decline";
+    }
+    echo "<tr class='$status'>",
         "<td>",
             $row["r_name"],
         "</td>",
@@ -32,7 +34,12 @@ foreach ($get_appointment_data as $row){
         "<td>",
             $row["r_email"],
         "</td>",
-        "<td>$detail_btn</td>",
+        "<td class='action-status'>",
+        "$detail_btn",
+        "</td>",
+        "<td class='action-status'>",
+        "<button class='approve-btn'>Approve</button>",
+        "</td>",
     "</tr>";
 }
-$conn->close();
+mysqli_close($conn);
