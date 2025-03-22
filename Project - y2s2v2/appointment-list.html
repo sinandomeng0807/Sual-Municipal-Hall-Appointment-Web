@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment List</title>
+    <link rel="stylesheet" href="appointment-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="notifications.css">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Photos/logo.png" alt="Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="dashboard.html"><i class="fa-solid fa-gauge mr-3"></i> Dashboard</a></li>
+            <li><a href="appointment-list.html" class="active"><i class="fa-solid fa-list mr-3"></i> Appointment List</a></li>
+            <li><a href="manage-appointment.html"><i class="fa-solid fa-list-check"></i> Manage Appointment</a></li>
+            <li><a href="add-appointment.html"><i class="fa-solid fa-plus mr-3"></i> Add Appointment</a></li>
+        </ul>
+            <div class="sign-out" onclick="confirmSignOut()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </div>
+        </div>
+        
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Sual Municipal Hall Admin Panel</h1>
+            <div class="user-info">
+                <div class="notification-container">
+                    <div class="notificationBtn" id="notificationBtn">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notification-badge" id="notifBadge"></span>
+                    </div>
+                    <div class="dropdown" id="notificationDropdown">
+                        <h3 class="notification-title">Notifications</h3>
+                        <ul id="notificationList">
+                            <li><strong>New Appointment:</strong> James R. - 10:00 AM</li>
+                            <li><strong>Approved Appointment:</strong> Maria S. - 2:00 PM</li>
+                            <li><strong>Cancelled Appointment:</strong> John D. - 3:30 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <span>James Santos</span>
+                    <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="display">
+                <h1>APPOINTMENT LIST</h1>
+                <input type="text" placeholder="Search...">
+            </div>
+            
+                <div class="filter-container">
+                    <div class="category-filters">
+                    <label>Filter by Category:</label>
+                    <input type="radio" name="category" value="All"> All
+                    <input type="radio" name="category" value="Residents"> Residents
+                    <input type="radio" name="category" value="Visitors"> Visitors
+                </div>
+                <div class="office-filter">
+                    <label for="office-filter">Filter by Office:</label>
+                    <select id="office-filter">
+                        <option value="">All Offices</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Mayor</option>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Vice Mayor</option>
+                        <option value="Office of the Municipal Mayor">Office of the Human Management Office</option>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Treasurer</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Secretary</option>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Assessor</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Budget Office</option>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Planning and Development Office</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Engineer</option>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Health Office</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Civil Registrar</op   tion>
+                        <option value="Office of the Municipal Vice Mayor">Office of the Municipal Social Welfare and Development</option>
+                        <option value="Office of the Municipal Mayor">Office of the Municipal Agriculturist</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Residence</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                        <th>Office</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>James R. Manalo</td>
+                        <td>Visitor</td>
+                        <td>Poblacion</td>
+                        <td>093333333</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='Visitor.html'"> View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carl L. Peralta</td>
+                        <td>Visitor</td>
+                        <td>Poblacion</td>
+                        <td>092222222</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='visitor.html'"> View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carl L. Peralta</td>
+                        <td>Resident</td>
+                        <td>Poblacion</td>
+                        <td>092222222</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='Resident.html'"> View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carl L. Peralta</td>
+                        <td>Resident</td>
+                        <td>Poblacion</td>
+                        <td>092222222</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='Resident.html'"> View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carl L. Peralta</td>
+                        <td>Visitor</td>
+                        <td>Poblacion</td>
+                        <td>092222222</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='visitor.html'"> View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carl L. Peralta</td>
+                        <td>Visitor</td>
+                        <td>Poblacion</td>
+                        <td>092222222</td>
+                        <td>Sample</td>
+                        <td><button class="view-btn" onclick="window.location.href='visitor.html'"> View Details</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function confirmSignOut() {
+            let confirmAction = confirm("Are you sure you want to sign out?");
+        if (confirmAction) {
+            window.location.href = 'HFID.html';
+        }
+        }
+    </script>
+
+    <script>
+        document.getElementById("notificationBtn").addEventListener("click", function() {
+            document.getElementById("notificationDropdown").classList.toggle("show");
+            document.getElementById("notifBadge").style.display = 'none'; // Remove badge on click
+        });
+
+        window.addEventListener("click", function(event) {
+            if (!document.getElementById("notificationBtn").contains(event.target) && 
+                !document.getElementById("notificationDropdown").contains(event.target)) {
+                document.getElementById("notificationDropdown").classList.remove("show");
+            }
+        });
+
+        // Show badge if there are notifications
+        document.addEventListener("DOMContentLoaded", function() {
+            let hasNotifications = document.querySelectorAll("#notificationDropdown ul li").length > 0;
+            if (hasNotifications) {
+                document.getElementById("notifBadge").style.display = 'block';
+            } else {
+                document.getElementById("notifBadge").style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
