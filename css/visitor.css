@@ -216,11 +216,9 @@ body {
     font-size: 16px;
 }
 
-.user-icon {
-    width: 24.5px;
-    height: 24.5px;
-    background: white;
-    border-radius: 50%;
+.user-icon i {
+    font-size: 25px;
+    color: white;
 }
 
 .content-form {
@@ -250,7 +248,7 @@ body {
 }
 
 .form-group input {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -281,6 +279,32 @@ body {
 .button-group {
     grid-column: span 3;
     display: flex;
+    justify-content: right;
+}
+
+.delete-btn {
+    background: #ff4d4d; /* Red background */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn i {
+    color: white;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: #e63939;
+    transform: scale(1.1);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
 }

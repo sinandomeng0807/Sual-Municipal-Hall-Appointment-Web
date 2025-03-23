@@ -215,11 +215,9 @@ body {
     font-size: 16px;
 }
 
-.user-icon {
-    width: 24.5px;
-    height: 24.5px;
-    background: white;
-    border-radius: 50%;
+.user-icon i {
+    font-size: 25px;
+    color: white;
 }
 
 .content-form {
@@ -249,7 +247,7 @@ body {
 }
 
 .form-group input {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -292,6 +290,11 @@ body {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    font-weight: bold;
+}
+
+.accept-btn:hover{
+    background: green;
 }
 
 .reject-btn {
@@ -302,4 +305,9 @@ body {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    font-weight: bold;
+}
+
+.reject-btn:hover{
+    background: red;
 }

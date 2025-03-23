@@ -219,11 +219,9 @@ body {
     font-size: 16px;
 }
 
-.user-icon {
-    width: 24.5px;
-    height: 24.5px;
-    background: white;
-    border-radius: 50%;
+.user-icon i {
+    font-size: 25px;
+    color: white;
 }
 
 .content {
@@ -279,6 +277,29 @@ th, td {
 th{
     background-color: #ccc;
 }
+
+.pending-btn { 
+    background: darkorange;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.decline-btn { 
+    background: red;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
 .approve-btn { 
     background: darkgreen;
     color: white;
@@ -287,13 +308,35 @@ th{
     cursor: pointer;
     width: 100%;
     border-radius: 8px;
+    font-weight: bold;
 }
-.view-btn { 
-    background: #7D1F1F;
+
+.delete-btn {
+    background: #991B1B;
     color: white;
     padding: 8px 10px;
     border: none;
     cursor: pointer;
     width: 100%;
     border-radius: 8px;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: red;
+}
+
+.view-btn { 
+    background: #374151;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.view-btn:hover {
+    background: #7b7b7b;
 }

@@ -215,11 +215,9 @@ body {
     font-size: 16px;
 }
 
-.user-icon {
-    width: 24.5px;
-    height: 24.5px;
-    background: white;
-    border-radius: 50%;
+.user-icon i {
+    font-size: 25px;
+    color: white;
 }
 
 .content {
@@ -298,4 +296,9 @@ th{
     cursor: pointer;
     width: 100%;
     border-radius: 8px;
+    font-weight: bold;
+}
+
+.view-btn:hover {
+    background: #4CAF50;
 }

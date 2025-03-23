@@ -18,7 +18,7 @@ body {
 .sidebar .logo {
     width: 150px;
     height: 150px;
-    background-image: url('./../Photos/logo.png');
+    background-image: url('Photos/logo.png');
     background-size: 150px;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ body {
 
 .main-content {
     flex: 1;
-    background-image: url('./../Photos/bg.png');
+    background-image: url('Photos/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
