@@ -4,7 +4,7 @@ class EmailController {
     public function sendEmail() {
         require "../model/EmailModel.php";
         $mail = new EmailSender();
-        echo $mail->send("test@email.com", "Test PHP", "Test Subject PHP", "Test Body PHP");
+        echo $mail->send("angelocapara@gmail.com", "Test PHP", "Test Subject PHP", "Test Body PHP");
     }
 }
 

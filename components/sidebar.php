@@ -1,6 +1,6 @@
 <script type="text/javascript" src="../scripts/confirmation_popup.js"></script>
 <div class="logo">
-    <img src="../Photos/logo.png" alt="Logo">
+    <img src="../Photos/final_logo.png" alt="Logo">
 </div>
 <ul class="nav">
     <li><a href="dashboard.php"><i class="fa-solid fa-gauge mr-3"></i> Dashboard</a></li>
