@@ -1,3 +1,4 @@
+<script type="text/javascript" src="../scripts/confirmation_popup.js"></script>
 <div class="logo">
     <img src="../Photos/logo.png" alt="Logo">
 </div>
@@ -7,5 +8,7 @@
     <li><a href="manage-appointment.php"><i class="fa-solid fa-list-check"></i> Manage Appointment</a></li>
     <li><a href="add-appointment.php"><i class="fa-solid fa-plus mr-3"></i> Add Appointment</a></li>
 </ul>
-    <div class="sign-out"onclick="window.location.href='HFID.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</div>
+    <div class="sign-out" onclick="confirmSignOut()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+    </div>
 </div>

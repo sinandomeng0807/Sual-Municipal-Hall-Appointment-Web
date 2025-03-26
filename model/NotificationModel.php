@@ -17,7 +17,7 @@ class Notification {
         WHERE NOT EXISTS (
         SELECT 1
         FROM notification ntfy
-        WHERE ntfy.notify_id = appnt.id)";
+        WHERE ntfy.notify_id = appnt.id and ntfy.notify_appoint = appnt.status)";
         $this->db->query($query);
     }
 

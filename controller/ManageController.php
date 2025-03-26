@@ -8,7 +8,7 @@
             $output = "";
             foreach ($get_list as $row) {
                 $btn_func = $row['id'];
-                $detail_btn = '<button class="view-btn" onclick="ViewDetails('."'$btn_func'".')">View Details</button>';
+                $detail_btn = '<button class="view-btn" onclick="ViewManage('."'$btn_func'".')">View Details</button>';
                 $delete_btn = '<button class="delete-btn">Delete</button>';
                 if ($row["occupant"] == 'Resident') {
                     $location = $row["r_barangay"];

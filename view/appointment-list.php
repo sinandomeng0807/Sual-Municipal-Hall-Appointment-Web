@@ -10,17 +10,9 @@
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/office_filter.js"></script>
+    <script type="text/javascript" src="../scripts/view_detail.js"></script> 
     <script type="text/javascript" src="../scripts/notification.js"></script>
-    <script>
-    $(document).ready(function(){
-        $(".search").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $(".appointment-list tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-    </script> 
+    <script type="text/javascript" src="../scripts/search.js"></script> 
 </head>
 <body>
     <!-- Sidebar -->
@@ -32,7 +24,7 @@
         <div class="header">
             <h1>Sual Municipal Hall Admin Panel</h1>
             <div class="user-info">
-                <?php require "../components/notification.php" ?>
+                <?php require "../components/notification.php"?>
                 <div class="user-info">
                     <span>James Santos</span>
                     <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
