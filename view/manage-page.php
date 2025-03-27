@@ -71,6 +71,13 @@
                     'status': 'approve'
                 }
             );
+            $.post(
+                "../controller/SendEmail.php",
+                {
+                    'id': $("input[name='id']").val(),
+                    'status': 'approve'
+                }
+            );
             alert('Appointment Approved');
         });
         $(".reject-btn").click(function(){
@@ -81,6 +88,14 @@
                     'status': 'decline'
                 }
             );
+            $.post(
+                "../controller/SendEmail.php",
+                {
+                    'id': $("input[name='id']").val(),
+                    'status': 'decline'
+                }
+            );
+            
             alert('Appointment Declined');
         });
         $(".delete-btn").click(function(){

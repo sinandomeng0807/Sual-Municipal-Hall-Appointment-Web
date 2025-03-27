@@ -1,12 +1,9 @@
 <?php
-require "DatabaseConnection.php";
-
 class Notification {
     private $db;
 
     public function __construct() {
-        
-        $database = new DatabaseConnection();
+        $database = new mysqli("localhost", "root", "", "sual_municipal_hall");
         $conn = $database->connect();
         $this->db = $conn;
     }

@@ -1,12 +1,9 @@
 <?php
-require "DatabaseConnection.php";
-
-
 class AppointmentList {
     private $db;
 
-    public function __construct() {
-        $database = new DatabaseConnection();
+    private function __construct() {
+        $database = new mysqli("localhost", "root", "", "sual_municipal_hall");
         $conn = $database->connect();
         $this->db = $conn;
     }

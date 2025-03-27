@@ -14,7 +14,7 @@
         <input type="password" id="password" placeholder="Enter Password">
         <div class="actions">
             <button id="special" onclick="window.location.href='dashboard.php'">Login</button>
-            <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+            <a href="forgot-password.php" class="forgot-password">Forgot Password?</a>
         </div>
     </div>
 </body>
