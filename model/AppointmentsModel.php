@@ -1,9 +1,12 @@
 <?php
+require "DatabaseConnection.php";
+
+
 class AppointmentList {
     private $db;
 
-    private function __construct() {
-        $database = new mysqli("localhost", "root", "", "sual_municipal_hall");
+    public function __construct() {
+        $database = new DatabaseConnection();
         $conn = $database->connect();
         $this->db = $conn;
     }
@@ -25,7 +28,7 @@ class AppointmentList {
     }
 
     public function approveAppointment($id) {
-        $query = "UPDATE appointments SET status='approve' WHERE id='$id'";
+        $query = "UPDATE appointments SET status='decline' WHERE id='$id'";
         $this->db->query($query);
     }
 

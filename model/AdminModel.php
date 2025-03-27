@@ -1,9 +1,10 @@
 <?php
+require "DatabaseConnection.php";
 class Admin{
     private $db;
 
-    private function __construct() {
-        $database = new mysqli("localhost", "root", "", "sual_municipal_hall");
+    public function __construct() {
+        $database = new DatabaseConnection();
         $conn = $database->connect();
         $this->db = $conn;
     }
