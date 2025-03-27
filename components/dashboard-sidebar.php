@@ -1,6 +1,6 @@
 <!-- Sidebar -->
 <aside class="w-60 bg-red-900 text-white p-5 h-full flex flex-col items-center">
-    <img src="./../Photos/logo.png" alt="Logo" class="w-21 h-21 mb-5"> <!-- Adjust logo as needed -->
+    <img src="./../Photos/final_logo.png" alt="Logo" class="w-21 h-21 mb-5"> <!-- Adjust logo as needed -->
     <nav class="custom-nav">
         <ul class="w-full">
             <li class="flex items-center p-3 bg-red-700 rounded-2xl my-2 border-2 border-white">

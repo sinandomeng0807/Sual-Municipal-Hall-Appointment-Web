@@ -25,7 +25,7 @@ class AppointmentList {
     }
 
     public function approveAppointment($id) {
-        $query = "UPDATE appointments SET status='decline' WHERE id='$id'";
+        $query = "UPDATE appointments SET status='approve' WHERE id='$id'";
         $this->db->query($query);
     }
 

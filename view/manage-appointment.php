@@ -42,9 +42,9 @@
             <div class="filter-container">
                 <label>Appointment:</label>
                 <input type="radio" name="category" value="All" checked>All
-                <input type="radio" name="category" value="Approve">Approve
+                <input type="radio" name="category" value="Approve">Approved
                 <input type="radio" name="category" value="Pending">Pending
-                <input type="radio" name="category" value="Decline">Decline
+                <input type="radio" name="category" value="Decline">Declined
             </div>
             <div class="table-container">
                 <table>
