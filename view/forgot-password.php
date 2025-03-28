@@ -8,13 +8,23 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            $(".check-id").on("click", function(){
-                $.post(
-                    "../controller/NewPassword.php",
-                    {
-                        "check_id":$("input[name='admin-id']").val();
+            $(".check-id").click(function(){
+                $.ajax({
+                    url:"../controller/NewPassword.php",
+                    method:"POST",
+                    data:{check_id:$("input[name='admin-id']").val()},
+                    dataType:"json",
+                    success:function(data){
+                        if (data.check_id == "no") {
+                            alert("Employee does not exist! Check your I.D number");
+                        } else {
+                            var form = $('<form action="setnew-password.php" method="POST">' + '<input type="hidden" name="admin" value="'+$("input[name='admin-id']").val()+'">' + '</form>');
+                            //$.post("database-connection/login.php", {'employee_id' : appointment_id, 'password': 'password'}, function(){window.location.href='database-connection/login.php'});
+                            $('body').append(form);
+                            form.submit();
+                        }
                     }
-                )
+                })
             })
         })
     </script>
@@ -24,10 +34,8 @@
         <div class="logo"></div>
         <h2>Forgot Password?</h2>
         <p>Please enter your employee I.D to reset your password</p>
-        <form action="reset-password.php" method="POST">
-            <input type="text" name="admin-id" placeholder="Enter your Employee I.D." required>
-            <button id="special" class="check-id">Submit</button>
-        </form>
+        <input type="text" name="admin-id" placeholder="Enter your Employee I.D." required>
+        <button id="special" class="check-id">Submit</button>
     </div>
 </body>
 </html>

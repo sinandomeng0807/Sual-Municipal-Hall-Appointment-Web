@@ -15,5 +15,10 @@ class Admin{
         $count = mysqli_num_rows($check);
         return $count;
     }
+
+    public function changePassword($id, $newpassword){
+        $query = "UPDATE admin SET password='$newpassword' WHERE employee_id = '$id'";
+        $this->db->query($query);
+    }
 }
 ?>

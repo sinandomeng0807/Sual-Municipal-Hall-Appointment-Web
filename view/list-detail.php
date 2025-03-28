@@ -28,6 +28,9 @@
                 $("input[name='contact']").val(data.contact);
                 $("input[name='office']").val(data.office);
                 $("input[name='purpose']").val(data.purpose);
+                $(".selfie").attr("src", data.selfie);
+                $(".front").attr("src", data.front);
+                $(".back").attr("src", data.back);
             }
         })
     })
@@ -98,15 +101,21 @@
                 </div>
                 <div class="form-group">
                     <label>Front ID</label>
-                    <div class="image-upload">Upload Front ID</div>
+                    <div class="image-upload">
+                        <img class="front" style="width: inherit; height: inherit; object-fit: fill;">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Back ID</label>
-                    <div class="image-upload">Upload Back ID</div>
+                    <div class="image-upload">
+                        <img class="back" style="width: inherit; height: inherit; object-fit: cover;">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Selfie</label>
-                    <div class="image-upload">Upload Selfie</div>
+                    <div class="image-upload">
+                        <img class="selfie" style="width: inherit; height: inherit; object-fit: contain;">
+                    </div>
                 </div>
             </div>
         </div>

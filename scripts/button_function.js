@@ -11,3 +11,16 @@ function ViewManage(id) {
     $('body').append(form);
     form.submit();
 }
+
+function DeleteAppointment(id) {
+    if (confirm("Are you sure you want to delete this appointment?")) {
+        $.post(
+            "../controller/ListDetailController.php",
+            {
+                delete_id:id
+            }
+        );
+        alert("Appointment deleted successfully!");
+        window.open("manage-appointment.php", "_self");
+    }
+}

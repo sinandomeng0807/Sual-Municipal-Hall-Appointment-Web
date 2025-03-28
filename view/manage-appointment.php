@@ -10,9 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/notification.js"></script>
     <script type="text/javascript" src="../scripts/search.js"></script> 
-    <script type="text/javascript" src="../scripts/view_detail.js"></script>
+    <script type="text/javascript" src="../scripts/button_function.js"></script>
     <script type="text/javascript" src="../scripts/manage_list.js"></script>
-    
 </head>
 <body>
     <!-- Sidebar -->

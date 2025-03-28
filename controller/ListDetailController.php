@@ -15,7 +15,10 @@
             "brgy" => $pd["r_barangay"],
             "contact" => $pd["r_contact"],
             "office" => $pd["office"],
-            "purpose" => $pd["purpose"]
+            "purpose" => $pd["purpose"],
+            "front" => $pd["front_photo_path"],
+            "back" => $pd["back_photo_path"],
+            "selfie" => $pd["selfie_photo_path"]
         );
         echo json_encode($data);
     }
