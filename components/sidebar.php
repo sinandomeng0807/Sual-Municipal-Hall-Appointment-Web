@@ -1,4 +1,11 @@
-<script type="text/javascript" src="../scripts/confirmation_popup.js"></script>
+<script type="text/javascript">
+    function confirmSignOut() {
+        let confirmAction = confirm("Are you sure you want to sign out?");
+        if (confirmAction) {
+            window.location.href = '../controller/Logout.php';
+        }
+    }
+</script>
 <div class="logo">
     <img src="../Photos/final_logo.png" alt="Logo">
 </div>

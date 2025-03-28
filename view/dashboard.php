@@ -1,3 +1,4 @@
+<?php require "../controller/Session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

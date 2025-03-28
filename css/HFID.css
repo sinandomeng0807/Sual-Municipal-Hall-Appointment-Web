@@ -71,8 +71,8 @@ button:hover {
     background-color: #ccc;
 }
 .forgot-password {
-    width: 45%;
-    text-align: right;
+    width: 50%;
+    text-align: left;
     color: blue;
     text-decoration: none;
 }

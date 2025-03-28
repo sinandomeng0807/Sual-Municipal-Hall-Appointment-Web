@@ -17,5 +17,5 @@
             </li>
         </ul>
     </nav>
-    <button class="mt-auto mb-0 bg-gray-700 p-3 rounded-2xl w-full"> <i class="fa-solid fa-arrow-right-from-bracket"></i> <a href="HFID.html"> Sign Out</a></button>
+    <button class="mt-auto mb-0 bg-gray-700 p-3 rounded-2xl w-full"> <i class="fa-solid fa-arrow-right-from-bracket"></i> <a href="../controller/Logout.php"> Sign Out</a></button>
 </aside> 

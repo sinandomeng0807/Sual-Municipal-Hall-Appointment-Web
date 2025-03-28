@@ -23,7 +23,7 @@ class Notification {
 
     public function fetchNotification() {
         $this->updateNotificationTable();
-        $query = "SELECT * FROM notification ORDER BY notification_created DESC LIMIT 5";
+        $query = "SELECT * FROM notification ORDER BY notify_created DESC LIMIT 5";
         return $this->db->query($query);
     }
 
