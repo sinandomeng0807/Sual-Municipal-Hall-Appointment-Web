@@ -36,5 +36,26 @@ class AppointmentList {
         $query = "DELETE FROM appointments WHERE id='$id'";
         $this->db->query($query);
     }
+
+    public function getAppointmentCount(){
+        $query = "SELECT * FROM appointments";
+        $decline = "SELECT * FROM appointments WHERE status='decline'";
+        $approve = "SELECT * FROM appointments WHERE status='approve'";
+        $pending = "SELECT * FROM appointments WHERE status='pending'";
+        $get_count = $this->db->query($query);
+        $get_count_d = $this->db->query($decline);
+        $get_count_a = $this->db->query($approve);
+        $get_count_p = $this->db->query($pending);
+        $all = mysqli_num_rows($get_count);
+        $decline = mysqli_num_rows($get_count_d);
+        $approve = mysqli_num_rows($get_count_a);
+        $pending = mysqli_num_rows($get_count_p);
+        return array(
+            "all"=>$all,
+            "decline"=>$decline,
+            "approve"=>$approve,
+            "pending"=>$pending
+        );
+    }
 }
 ?>

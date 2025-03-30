@@ -10,6 +10,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/notification.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url:"../controller/DashboardController.php",
+                method:"POST",
+                data:{},
+                dataType:"json",
+                success:function(data){
+                    $(".all").html(data.all);
+                    $(".approved").html(data.approve);
+                    $(".pending").html(data.pending);
+                    $(".declined").html(data.decline);
+                }
+            })
+        })
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -40,19 +56,19 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold">NUMBER OF APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">449</p>
+                        <p class="text-2xl font-bold all">0</p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold text-green-600">NUMBER OF APPROVED APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">100</p>
+                        <p class="text-2xl font-bold approved">0</p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center">
                         <p class="text-sm font-bold text-orange-600">NUMBER OF PENDING APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">125</p>
+                        <p class="text-2xl font-bold pending">0</p>
                     </div>
                     <div class="bg-white p-5 rounded shadow text-center border-2 border-500">
-                        <p class="text-sm font-bold text-red-600">NUMBER OF REJECTED APPOINTMENTS</p>
-                        <p class="text-2xl font-bold">15</p>
+                        <p class="text-sm font-bold text-red-600">NUMBER OF DECLINED APPOINTMENTS</p>
+                        <p class="text-2xl font-bold declined">0</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +155,7 @@
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [{
                     label: 'Appointments',
-                    data: [120, 500, 10, 5, 8, 12, 4],
+                    data: [1, 2, 3, 4, 5, 6, 7],
                     backgroundColor: 'rgba(54, 162, 235, 0.6)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
@@ -151,7 +167,7 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        suggestedMax: 600
+                        suggestedMax: 50
                     }
                 }
             }
