@@ -71,7 +71,7 @@
                     $row["occupant"].
                 "</td>".
                 "<td>".
-                $location.
+                $row["r_address"].
                 "</td>".
                 "<td>".
                     $row["r_contact"].

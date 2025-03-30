@@ -73,8 +73,8 @@
                 <table>
                     <thead>
                         <tr><th>Name</th>
-                        <th>Residence</th>
-                        <th>Location</th>
+                        <th>Occupant</th>
+                        <th>Address</th>
                         <th>Contact</th>
                         <th>Email</th>
                         <th></th></tr>

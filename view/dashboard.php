@@ -79,8 +79,8 @@
                 <thead class="bg-gray-300">
                     <tr>
                         <th class="p-2 text-left">Name</th>
-                        <th class="p-2 text-left">Residents</th>
-                        <th class="p-2 text-left">Type</th>
+                        <th class="p-2 text-left">Occupant</th>
+                        <th class="p-2 text-left">Office</th>
                         <th class="p-2 text-left">Date</th>
                         <th class="p-2 text-left">Time</th>
                     </tr>
