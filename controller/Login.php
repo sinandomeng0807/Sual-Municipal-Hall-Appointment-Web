@@ -10,7 +10,7 @@ if (isset($_POST)){
 
     if ($password == $row["password"]) {
         $_SESSION["username"] = $username;
-        $data = array ("location"=>"dashboard.php");
+        $data = array ("location"=>"./view/dashboard.php");
         echo json_encode($data);
     } else {
         $data = array ("error" => "Login Failed... Check Username or Password...");
