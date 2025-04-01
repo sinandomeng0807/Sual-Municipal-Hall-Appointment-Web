@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../css/add-appointment.css">
     <link rel="stylesheet" href="../css/notifications.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/notification.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("")
+        })
+    </script>
 </head>
 <body>
     <!-- Sidebar -->
@@ -20,20 +27,7 @@
         <div class="header">
             <h1>Sual Municipal Hall Admin Panel</h1>
             <div class="user-info">
-                <div class="notification-container">
-                    <div class="notificationBtn" id="notificationBtn">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="notification-badge" id="notifBadge"></span>
-                    </div>
-                    <div class="dropdown" id="notificationDropdown">
-                        <h3 class="notification-title">Notifications</h3>
-                        <ul id="notificationList">
-                            <li><strong>New Appointment:</strong> James R. - 10:00 AM</li>
-                            <li><strong>Approved Appointment:</strong> Maria S. - 2:00 PM</li>
-                            <li><strong>Cancelled Appointment:</strong> John D. - 3:30 PM</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php require "../components/notification.php" ?>
                 <div class="user-info">
                     <span><?php echo $_SESSION["username"] ?></span>
                     <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
@@ -48,7 +42,7 @@
                 <input type="text" placeholder="Search...">
             </div>
 
-            <div class="content-form">
+            <form class="content-form" action="../controller/submit_appointment.php" method="POST">
                 <div class="form-container">
                     <div class="form-group">
                         <select>
@@ -127,33 +121,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="submit-btn">Submit Appointment</button>
-            </div>
-            
-            <script>
-                document.getElementById("notificationBtn").addEventListener("click", function() {
-                    document.getElementById("notificationDropdown").classList.toggle("show");
-                    document.getElementById("notifBadge").style.display = 'none'; // Remove badge on click
-                });
-        
-                window.addEventListener("click", function(event) {
-                    if (!document.getElementById("notificationBtn").contains(event.target) && 
-                        !document.getElementById("notificationDropdown").contains(event.target)) {
-                        document.getElementById("notificationDropdown").classList.remove("show");
-                    }
-                });
-        
-                // Show badge if there are notifications
-                document.addEventListener("DOMContentLoaded", function() {
-                    let hasNotifications = document.querySelectorAll("#notificationDropdown ul li").length > 0;
-                    if (hasNotifications) {
-                        document.getElementById("notifBadge").style.display = 'block';
-                    } else {
-                        document.getElementById("notifBadge").style.display = 'none';
-                    }
-                });
-            </script>
-            
+                <input type="submit" class="submit-btn" value="Submit Appointment">
+            </form>        
             <script>
                 function previewImage(event, id) {
                     const input = event.target;

@@ -27,10 +27,10 @@
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                             datasets: [{
-                                label: 'Next 7 days appointments',
-                                data: [data.weekly["Mon"], data.weekly["Tue"], data.weekly["Wed"], data.weekly["Thu"], data.weekly["Fri"], data.weekly["Sat"], data.weekly["Sun"]],
+                                label: 'This week appointments',
+                                data: [data.weekly["Mon"], data.weekly["Tue"], data.weekly["Wed"], data.weekly["Thu"], data.weekly["Fri"]],
                                 backgroundColor: 'rgba(54, 162, 235, 0.6)',
                                 borderColor: 'rgba(54, 162, 235, 1)',
                                 borderWidth: 1
