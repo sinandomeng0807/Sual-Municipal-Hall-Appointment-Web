@@ -16,6 +16,20 @@ class AppointmentList {
         return $this->db->query($query);
     }
 
+    public function getToday() {
+        $current_date = date("Y-m-d");
+        $query = "SELECT * FROM appointments WHERE date='$current_date'";
+        return $this->db->query($query);
+    }
+
+    public function getWeek() {
+        $monday = date("Y-m-d", strtotime("monday this week"));
+        $sunday = date("Y-m-d", strtotime("sunday this week"));
+        $query = "SELECT date FROM appointments WHERE NOT (date <= '$monday' OR date >= '$sunday')";
+        return $this->db->query($query);
+    }
+
+
     public function getDetails($id) {
         $query = "SELECT * FROM appointments WHERE id='$id'";
         $row = $this->db->query($query);
@@ -28,7 +42,7 @@ class AppointmentList {
     }
 
     public function approveAppointment($id) {
-        $query = "UPDATE appointments SET status='decline' WHERE id='$id'";
+        $query = "UPDATE appointments SET status='approve' WHERE id='$id'";
         $this->db->query($query);
     }
 

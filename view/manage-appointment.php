@@ -26,7 +26,7 @@
             <div class="user-info">
                 <?php require "../components/notification.php" ?>
                 <div class="user-info">
-                    <span>James Santos</span>
+                    <span><?php echo $_SESSION["username"] ?></span>
                     <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
                 </div>
             </div>

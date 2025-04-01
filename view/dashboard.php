@@ -22,9 +22,34 @@
                     $(".approved").html(data.approve);
                     $(".pending").html(data.pending);
                     $(".declined").html(data.decline);
-                }
-            })
-        })
+                    $(".today").html(data.today);
+                    const ctx = document.getElementById('appointmentsChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                            datasets: [{
+                                label: 'Next 7 days appointments',
+                                data: [data.weekly["Mon"], data.weekly["Tue"], data.weekly["Wed"], data.weekly["Thu"], data.weekly["Fri"], data.weekly["Sat"], data.weekly["Sun"]],
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: false,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    suggestedMax: 10
+                                }
+                            }
+                        }
+                    });
+                } // success / function
+            }) // ajax
+        }) // document ready
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -39,7 +64,7 @@
                 <div class="flex items-center gap-5">
                     <?php require "../components/dashboard-notification.php"?>
                     <div class="user-info">
-                        <span>James Santos</span>
+                        <span><?php echo $_SESSION["username"] ?></span>
                         <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
                     </div>
                 </div>
@@ -85,93 +110,14 @@
                         <th class="p-2 text-left">Time</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2 text-left">Manalo, James R</td>
-                        <td class="p-2 text-left">Resident</td>
-                        <td class="p-2 text-left">Appointment</td>
-                        <td class="p-2 text-left">Date</td>
-                        <td class="p-2 text-left">Time</td>
-                    </tr>
+                <tbody class="today">
                 </tbody>
             </table>
         </main>
     </div>
     
     <script>
-        const ctx = document.getElementById('appointmentsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Appointments',
-                    data: [1, 2, 3, 4, 5, 6, 7],
-                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: false,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        suggestedMax: 50
-                    }
-                }
-            }
-        });
+        
     </script>
 </body>
 </html>
