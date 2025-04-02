@@ -51,6 +51,12 @@ class AppointmentList {
         $this->db->query($query);
     }
 
+    public function addAppointment($office, $date, $time, $name, $address, $barangay, $contact, $email, $zipcode, $province, $occupant, $purpose, $front, $back, $selfie) {
+        $stmt = $this->db->prepare("INSERT INTO appointments (`office`, `date`, `time`, `r_name`, `r_address`, `r_barangay`, `r_contact`, `r_email`, `v_zip`, `v_province`, `occupant`, `purpose`, `front_photo_path`, `back_photo_path`, `selfie_photo_path`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssssssssss", $office, $date, $time, $name, $address, $barangay, $contact, $email, $zipcode, $province, $occupant, $purpose, $front, $back, $selfie);
+        $stmt->execute();
+    }
+
     public function getAppointmentCount(){
         $query = "SELECT * FROM appointments";
         $decline = "SELECT * FROM appointments WHERE status='decline'";

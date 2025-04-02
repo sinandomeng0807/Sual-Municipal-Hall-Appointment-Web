@@ -38,57 +38,57 @@
                 <input type="text" placeholder="Search...">
             </div>
 
-            <form class="content-form" action="../controller/submit_appointment.php" method="POST">
+            <form action="../controller/AddAppointment.php" method="POST" enctype=multipart/form-data>
                 <div class="form-container">
                     <div class="form-group">
-                        <select>
+                        <select name="occupant">
                             <option value="Visitor">Visitor</option>
                             <option value="Resident">Resident</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text">
+                        <input type="text" name="name">
                     </div>
                     <div class="form-group">
                         <label>Date</label>
-                        <input type="date">
+                        <input type="date" name="date">
                     </div>
                     <div class="form-group">
                         <label>Time</label>
-                        <input type="time">
+                        <input type="time" name="time">
                     </div>
                     <div class="form-group">
                         <label>Address</label>
-                        <input type="text">
+                        <input type="text" name="address">
                     </div>
                     <div class="form-group">
                         <label>Office</label>
-                        <input type="text">
+                        <input type="text" name="office">
                     </div>
                     <div class="form-group">
                         <label>Barangay</label>
-                        <input type="text">
+                        <input type="text" name="barangay">
                     </div>
                     <div class="form-group">
                         <label>Zip Code</label>
-                        <input type="text">
+                        <input type="text" name="zip_code">
                     </div>
                     <div class="form-group">
                         <label>Province</label>
-                        <input type="text">
+                        <input type="text" name="province">
                     </div>
                     <div class="form-group">
                         <label>Contact Number</label>
-                        <input type="text">
+                        <input type="text" name="contact">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email">
+                        <input type="email" name="email">
                     </div>
                     <div class="form-group">
                         <label>Purpose</label>
-                        <input type="text">
+                        <input type="text" name="purpose">
                     </div>
             
                     <!-- Image Upload Fields -->
@@ -97,7 +97,7 @@
                         <div class="image-upload">
                             <span>Upload Front ID</span>
                             <img id="front-preview">
-                            <input type="file" accept="image/*" id="front-input" onchange="previewImage(event, 'front')">
+                            <input type="file" accept="image/*" name="frontPhoto" id="front-input" onchange="previewImage(event, 'front')">
                         </div>
                     </div>
                     <div class="form-group">
@@ -105,7 +105,7 @@
                         <div class="image-upload">
                             <span>Upload Back ID</span>
                             <img id="back-preview">
-                            <input type="file" accept="image/*" id="back-input" onchange="previewImage(event, 'back')">
+                            <input type="file" accept="image/*" name="backPhoto" id="back-input"  onchange="previewImage(event, 'back')">
                         </div>
                     </div>
                     <div class="form-group">
@@ -113,12 +113,12 @@
                         <div class="image-upload">
                             <span>Upload Selfie</span>
                             <img id="selfie-preview">
-                            <input type="file" accept="image/*" id="selfie-input" onchange="previewImage(event, 'selfie')">
+                            <input type="file" accept="image/*" name="selfiePhoto" id="selfie-input" onchange="previewImage(event, 'selfie')">
                         </div>
                     </div>
-                </div>
-                <input type="submit" class="submit-btn" value="Submit Appointment">
-            </form>        
+                    <input type="submit" class="submit-btn" value="Submit Appointment">
+                </div> 
+                </form>        
             <script>
                 function previewImage(event, id) {
                     const input = event.target;
