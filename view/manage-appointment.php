@@ -13,6 +13,7 @@
     <script type="text/javascript" src="../scripts/search.js"></script> 
     <script type="text/javascript" src="../scripts/button_function.js"></script>
     <script type="text/javascript" src="../scripts/manage_list.js"></script>
+    <script type="text/javascript" src="../scripts/sidebar_highlight.js"></script> 
 </head>
 <body>
     <!-- Sidebar -->

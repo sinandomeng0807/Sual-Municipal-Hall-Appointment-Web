@@ -28,6 +28,20 @@
             })
         })
     </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../Photos/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">

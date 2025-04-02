@@ -30,6 +30,35 @@
             })
         })
     </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../Photos/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-image: url('../Photos/logo.png');
+            background-size: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            font-size: 36px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
