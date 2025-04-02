@@ -11,6 +11,31 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/notification.js"></script>
     <script type="text/javascript" src="../scripts/sidebar_highlight.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $("input[name='zip_code']").on("change", function(){
+                zip_code = $("input[name='zip_code']").val();
+                if (zip_code.length < 4){
+                    alert("zip code must be 4 in length");
+                }
+                if (isNaN(zip_code)) {
+                    alert("zip code must be a valid number");
+                }
+            });
+            $("input[name='contact']").on("change", function(){
+                contact = $("input[name='contact']").val();
+                if (contact.length < 11){
+                    alert("contact number must be 11 digits");
+                }
+                if (isNaN(contact)){
+                    alert("contact number must only be a number");
+                }
+                if (!contact.startsWith("09")){
+                    alert("contact number must starts with 09")
+                }
+            })
+        })
+    </script>
 </head>
 <body>
     <!-- Sidebar -->
