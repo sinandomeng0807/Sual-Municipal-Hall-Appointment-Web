@@ -24,9 +24,9 @@ body {
     justify-content: center;
 }
 .logo {
-    width: 150px;
-    height: 150px;
-    background-image: url('../Photos/logo.png');
+    width: 180px;
+    height: 180px;
+    background-image: url('../Photos/final_logo.png');
     background-size: 200px;
     background-position: center;
     background-repeat: no-repeat;

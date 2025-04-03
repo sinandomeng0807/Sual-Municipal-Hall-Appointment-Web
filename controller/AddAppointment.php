@@ -42,8 +42,7 @@ if (isset($_POST)) {
         exit();
     }
 
-    if (!$appointment->addAppointment($office, $date, $time, $name, $address, $barangay, $contact, $email, $zip_code, $province, $occupant, $purpose, $frontPhotoPath, $backPhotoPath, $selfiePhotoPath)){
-
-    }
+    $appointment->addAppointment($office, $date, $time, $name, $address, $barangay, $contact, $email, $zip_code, $province, $occupant, $purpose, $frontPhotoPath, $backPhotoPath, $selfiePhotoPath);
+    header("Location: ../view/appointment-list.php");
 }
 ?>

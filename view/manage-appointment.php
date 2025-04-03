@@ -14,6 +14,21 @@
     <script type="text/javascript" src="../scripts/button_function.js"></script>
     <script type="text/javascript" src="../scripts/manage_list.js"></script>
     <script type="text/javascript" src="../scripts/sidebar_highlight.js"></script> 
+    <style>
+        .sign-out {
+            width: calc(100% - 40px);
+            font-size: 16px;
+            padding: 15px;
+            background-color: #374151;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            border: 2px solid #374151;
+            border-radius: 15px;
+            margin-top: 44.4vh;
+        }
+    </style>
+    
 </head>
 <body>
     <!-- Sidebar -->

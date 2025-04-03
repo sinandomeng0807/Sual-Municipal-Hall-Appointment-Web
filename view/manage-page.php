@@ -33,6 +33,20 @@
             text-align: center;
         }
     </style>
+    <style>
+        .sign-out {
+            width: calc(100% - 40px);
+            font-size: 16px;
+            padding: 15px;
+            background-color: #374151;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            border: 2px solid #374151;
+            border-radius: 15px;
+            margin-top: 44.4vh;
+        }
+    </style>
     <link rel="stylesheet" href="../css/visitor-new.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/notifications.css">
